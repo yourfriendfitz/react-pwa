@@ -27,7 +27,7 @@ function App() {
   const classes = useStyles();
 
   return (
-    <Container>
+    <Container maxWidth="sm">
       <div className={classes.root}>
         <AppBar position="static" color="default">
           <Toolbar>
@@ -41,8 +41,8 @@ function App() {
         <Grid container alignContent="center" justify="center">
           {data.map(video => (
             <div key={video.id}>
-              <h6>{video.name}</h6>
-              <video height={200} controls src={video.video_url} />
+              <h5 align="center" color="white">{video.name}</h5>
+              <video height={200} width={300} controls src={video.video_url} />
             </div>
           ))}
         </Grid>
