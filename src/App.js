@@ -1,11 +1,4 @@
 import React, { useState, useEffect } from "react";
-import ReactDOM from "react-dom";
-import Container from "@material-ui/core/Container";
-import Grid from "@material-ui/core/Grid";
-import { makeStyles } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
 
 function App() {
   const [data, setData] = useState([]);
@@ -18,36 +11,33 @@ function App() {
     fetchData();
   }, []);
 
-  const useStyles = makeStyles({
-    root: {
-      flexGrow: 1
-    }
-  });
-
-  const classes = useStyles();
-
   return (
-    <Container maxWidth="sm">
-      <div className={classes.root}>
-        <AppBar position="static" color="default">
-          <Toolbar>
-            <Typography variant="h6" color="inherit">
-              Videos
-            </Typography>
-          </Toolbar>
-        </AppBar>
-      </div>
-      <div className={classes.root}>
-        <Grid container alignContent="center" justify="center">
+    <div className="container-fluid bg-primary p-3 text-center text-white">
+      <nav className="navbar navbar-fixed-top text-center">
+        <div className="col"><h3>Art Videos</h3></div>
+      </nav>
+      <div className="container-fluid text-center vh-50 overflow-auto">
+        <div className="col">
           {data.map(video => (
-            <div key={video.id}>
-              <h5 align="center" color="white">{video.name}</h5>
-              <video height={200} width={300} controls src={video.video_url} />
+            <div key={video.id} className="card text-center m-2 bg-secondary">
+              <div className="card-body text-center">
+                <h4>{video.name}</h4>
+                <video
+                  className="m-auto"
+                  height={200}
+                  width={280}
+                  controls
+                  src={video.video_url}
+                />
+              </div>
             </div>
           ))}
-        </Grid>
+        </div>
       </div>
-    </Container>
+      <nav className="navbar navbar-fixed-bottom text-center">
+        <div className="col">OrangeValleyCaa API</div>
+      </nav>
+    </div>
   );
 }
 export default App;
