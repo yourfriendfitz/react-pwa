@@ -2,7 +2,7 @@ Screenshot:
 ![alt text](artVideos.png "Screenshot")
 
 Homescreen:
-![alt text](iOSScreen.png "Screenshot")
+![alt text](iOSScreen.PNG "Screenshot")
 
 iOS View:
-![alt text](iOSView.png "Screenshot")
+![alt text](iOSView.jpeg "Screenshot")
