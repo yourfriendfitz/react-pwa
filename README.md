@@ -11,3 +11,5 @@ Homescreen:
 iOS View:
 
 ![alt text](iOSView.jpeg "Screenshot")
+
+Please help improve this project by opening a pull request with a proposed change!
